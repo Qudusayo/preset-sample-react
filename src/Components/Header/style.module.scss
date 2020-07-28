@@ -1,0 +1,104 @@
+.header {
+    display: flex;
+    background-color: #efefef;
+    height: 130vh;
+    max-height: 900px;
+
+    img {
+        width: 45%;
+        height: 90%;
+    }
+
+    form {
+        align-self: center;
+        justify-self: center;
+        width: 40%;
+        margin: auto;
+
+        h1 {
+            font-weight: 400;
+            font-size: 2.4em;
+            margin-bottom: 0.5em;
+            color: #444444;
+        }
+
+        p {
+            font-size: 0.85em;
+            font-style: italic;
+            color: #777777;
+        }
+
+        select,
+        input[type="date"] {
+            display: block;
+            width: 90%;
+            height: 50px;
+            outline: none;
+            border: none;
+            background-color: #ffffff;
+            border-radius: 7px;
+            padding-left: 1em;
+            margin: 1em 0;
+            font-style: italic;
+        }
+
+        input[type="date"] {
+            width: 87.5%;
+        }
+
+        .flex {
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+
+            input,
+            button {
+                width: 45%;
+                height: 50px;
+                outline: none;
+                border: none;
+                border-radius: 7px;
+            }
+
+            input {
+                padding-left: 1em;
+                background-color: #ffffff;
+                font-style: italic;
+            }
+
+            button{
+                background-color: #599294;
+                color: #ffffff;
+                font-weight: 500;
+                font-style: italic;
+                cursor: pointer;
+                transition: all .2s linear;
+
+                &:hover{
+                    background-color: lighten($color: #597494, $amount: 10%);
+                    box-shadow: 0 3px 4px rgba(0,0,0,.3);
+                    transform: translateY(-2px);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .header{
+        padding-top: 2.5em;
+        padding-bottom: 1em;
+        flex-direction: column;
+        height: auto;
+
+        img{
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        form{
+            width: 80%;
+        }
+    }
+}

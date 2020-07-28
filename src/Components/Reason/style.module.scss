@@ -1,0 +1,23 @@
+@font-face{
+    font-family: "Impira";
+    src: url("../../assets/Imprima-Regular.ttf");
+}
+
+
+.reason{
+    padding: 3em 4em;
+    background-color: #efefef;
+    font-family: "Impira";
+
+    h1{
+        color: #555555;
+        padding-left: 0;
+        font-weight: 400;
+    }
+
+    .flex{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+}

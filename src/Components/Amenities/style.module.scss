@@ -1,0 +1,16 @@
+.amenities{
+    padding: 3em 5em;
+    background-color: #ffffff;
+
+    h1{
+        color: #555555;
+        padding-left: .5em;
+        font-weight: 400;
+    }
+
+    .flex{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}

@@ -1,0 +1,123 @@
+.navbar {
+    width: 100vw;
+    // max-width: 100%;
+    height: 2.5em;
+    background-color: #efefef;
+    padding: 0.8em 0;
+    position: fixed;
+    z-index: 10;
+
+    ul {
+        margin: 0;
+        display: flex;
+        list-style-type: none;
+        align-items: center;
+        justify-content: space-around;
+
+        li {
+            font-style: italic;
+            color: #666666;
+
+            &.logo {
+                width: 40%;
+                text-align: center;
+                font-weight: 400;
+                font-size: x-large;
+                font-style: normal;
+                text-shadow: 0 2px 3px rgba(0, 0, 0, 0.8);
+                color: #000000;
+
+                span {
+                    color: #1f6dfd;
+                }
+            }
+
+            &.bars{
+                cursor: pointer;
+                display: none;
+            }
+        }
+    }
+
+    .nav{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 601px) {
+    .navbar {
+        ul {
+            justify-content: space-between;
+            li {
+                &.lg {
+                    display: none;
+                }
+
+                &.logo {
+                    width: fit-content;
+                    align-self: flex-start;
+                }
+
+                &.bars{
+                    user-select: none;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+    .navbar {
+        ul {
+            position: relative;
+
+            li {
+                &.bars {
+                    position: absolute;
+                    right: 2em;
+                }
+            }
+        }
+    }
+
+    .navbar {
+        .nav {
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            width: 8em;
+            background-color: #efefef;
+            min-height: 90vh;
+            justify-content: space-around;
+            align-items: flex-start;
+            padding-inline-start: 1em;
+            right: 0;
+
+            &_hidden{
+                display: flex;
+                right: -10em;
+                animation: slideOut .5s linear ;
+            }
+            &_visible{
+                display: flex;
+                animation: slideIn .5s linear ;
+            }
+        }
+    }
+}
+
+@keyframes slideIn {
+    0%{
+        right: -10em;
+    }
+    100%{
+        right: 0;
+    }
+}
+
+@keyframes slideOut {
+    0%{
+        right: 0;
+    }
+    100%{
+        right: -10em;
+    }
+}
